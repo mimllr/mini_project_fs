@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Banker is a database-less Rails app that utilizing the [Currency Converter API](https://currencyconverterapi.com) to quicky convert USD, EUR, and SGD currencies. Exchange rates are cached and refreshed every minute to provide up-to-the-minute exchange rates without exhausting the API rate limit.
 
-Things you may want to cover:
+## To Install
 
-* Ruby version
+```
+$ git clone git@github.com:mimllr/mini_project_fs.git
+$ cd mini_project_fs
+$ bundle
+$ rails s
+```
 
-* System dependencies
+## Live Demo
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[The Banker](https://the-banker.herokuapp.com/)
