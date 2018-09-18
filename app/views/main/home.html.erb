@@ -1,27 +1,77 @@
-<h1>Convert</h1>
-<form action="/exchange">
-  <div class="row">
-    <div class="col-12 col-md-6">
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="pt-3">
+      <form id="currencyConvert" action="/exchange" data-remote='true'>
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col">
+                <h4>I have...</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <div class="input-group mb-3">
+                      <input id='startingAmount' type="number" class="form-control" placeholder="enter amount..." name="startingAmount">
+                      <div class="input-group-append">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Starting Currency Group">
+                          <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="startingCurrency" id="USD" autocomplete="off" value="USD" checked> USD
+                          </label>
+                          <label class="btn btn-outline-secondary">
+                            <input type="radio" name="startingCurrency" id="EUR" autocomplete="off" value="EUR"> EUR
+                          </label>
+                          <label class="btn btn-outline-secondary">
+                            <input type="radio" name="startingCurrency" id="SGD" autocomplete="off" value="SGD"> SGD
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col">
+                <h4>which is...</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col">
+                    <div class="input-group mb-3">
+                      <input id='endingAmount' type="number" class="form-control" placeholder="" name="endingAmount" disabled>
+                      <div class="input-group-append">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Ending Currency Group">
+                          <label class="btn btn-outline-secondary">
+                            <input type="radio" name="endingCurrency" id="USD" autocomplete="off" value="USD"> USD
+                          </label>
+                          <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="endingCurrency" id="EUR" autocomplete="off" value="EUR" checked> EUR
+                          </label>
+                          <label class="btn btn-outline-secondary">
+                            <input type="radio" name="endingCurrency" id="SGD" autocomplete="off" value="SGD"> SGD
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col">
-              <h4>Select Starting Currency</h4>
+            <input class="btn btn-dark ml-auto" type="submit" value="Convert">
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="USD" autocomplete="off" checked> USD
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="EUR" autocomplete="off"> EUR
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="SGD" autocomplete="off"> SGD
-              </label>
-          </div>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
-</form>
+</div>
