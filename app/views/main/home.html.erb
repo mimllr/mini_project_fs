@@ -18,13 +18,13 @@
                       <div class="input-group-append">
                         <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Starting Currency Group">
                           <label class="btn btn-outline-secondary active">
-                            <input type="radio" name="startingCurrency" id="USD" autocomplete="off" value="USD" checked> USD
+                            <input type="radio" name="startingCurrency" id="startUSD" autocomplete="off" value="USD" checked> USD
                           </label>
                           <label class="btn btn-outline-secondary">
-                            <input type="radio" name="startingCurrency" id="EUR" autocomplete="off" value="EUR"> EUR
+                            <input type="radio" name="startingCurrency" id="startEUR" autocomplete="off" value="EUR"> EUR
                           </label>
                           <label class="btn btn-outline-secondary">
-                            <input type="radio" name="startingCurrency" id="SGD" autocomplete="off" value="SGD"> SGD
+                            <input type="radio" name="startingCurrency" id="startSGD" autocomplete="off" value="SGD"> SGD
                           </label>
                         </div>
                       </div>
@@ -49,13 +49,13 @@
                       <div class="input-group-append">
                         <div class="btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="Ending Currency Group">
                           <label class="btn btn-outline-secondary">
-                            <input type="radio" name="endingCurrency" id="USD" autocomplete="off" value="USD"> USD
+                            <input type="radio" name="endingCurrency" id="endUSD" autocomplete="off" value="USD"> USD
                           </label>
                           <label class="btn btn-outline-secondary active">
-                            <input type="radio" name="endingCurrency" id="EUR" autocomplete="off" value="EUR" checked> EUR
+                            <input type="radio" name="endingCurrency" id="endEUR" autocomplete="off" value="EUR" checked> EUR
                           </label>
                           <label class="btn btn-outline-secondary">
-                            <input type="radio" name="endingCurrency" id="SGD" autocomplete="off" value="SGD"> SGD
+                            <input type="radio" name="endingCurrency" id="endSGD" autocomplete="off" value="SGD"> SGD
                           </label>
                         </div>
                       </div>
@@ -68,7 +68,14 @@
         </div>
         <div class="row">
           <div class="col">
-            <input class="btn btn-dark ml-auto" type="submit" value="Convert">
+            <p class="text-danger" id='warning'>
+              <small>
+                <i>
+                  Choose different starting and ending currencies.
+                </i>
+              </small>
+            </p>
+            <input id='convertButton' class="btn btn-dark ml-auto" type="submit" value="Convert">
           </div>
         </div>
       </form>

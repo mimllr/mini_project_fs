@@ -10,4 +10,13 @@ $(document).ready(function() {
   $('input').on('change', function() {
     $('#endingAmount').val('');
   });
+  $('input[name=startingCurrency], input[name=endingCurrency]').on('change', function() {
+    if ($('input[name=startingCurrency]:checked').val() === $('input[name=endingCurrency]:checked').val()) {
+      $('#convertButton').attr('disabled', 'disabled');
+      $('#warning').show();
+    } else {
+      $('#convertButton').removeAttr('disabled');
+      $('#warning').hide();
+    }
+  })
 });
